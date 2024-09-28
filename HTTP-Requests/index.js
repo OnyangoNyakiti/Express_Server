@@ -6,11 +6,17 @@ const port = 3000;
 app.get('/', (req, res) => {
     res.send('<h1>Hello World!</h1>');
 })
-app.get('/about', (req, res) => {
-    res.send('<h1>About Me</h1><p>My Name is Malcolm Enos Onyango</p>');
+app.get('/register', (req, res) => {
+    res.sendStatus(201);
 })
-app.get('/contact', (req, res) => {
-    res.send('<h1>Contact Me</h1><p>My heartfelt love for you</p>');
+app.put('/user/malcolm', (req, res) => {
+    res.sendStatus(200);
+})
+app.patch('/user/malcolm', (req, res) => {
+    res.sendStatus(200);
+})
+app.delete('/user/malcolm', (req, res) => {
+    res.sendStatus(201);
 })
 app.listen(port, () => {
     console.log(`Listening on port ${port}!`);
